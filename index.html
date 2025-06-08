@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/foto.jpg" alt="Foto Profil" class="profil-img">
+    <h1>RICA LIZANIA</h1>
+  </header>
+
+  <nav class="nav-buttons">
+    <button onclick="showDashboard()">Dashboard</button>
+    <button onclick="showSection('tugas')">Tugas</button>
+    <button onclick="showSection('kuis')">Kuis</button>
+  </nav>
+
+  <main>
+    <!-- DASHBOARD SECTION -->
+    <section id="dashboard" class="content-section">
+      <p class="deskripsi">Saya Mahasiswa S1 Ilmu Komputer tahun 2022, Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Lampung</p>
+      <p class="kode">221705046 - ILKOM22</p>
+    </section>
+
+    <!-- TUGAS SECTION -->
+    <section id="tugas" class="content-section">
+      <h2>Kumpulan Tugas</h2>
+      <ul>
+        <li><strong>Tugas 1:</strong> <a href="https://youtu.be/RWNDtgrmsUI" target="_blank">Lihat Video</a></li>
+        <li><strong>Tugas 2:</strong> <a href="assets/tugas2.pdf" target="_blank">Unduh PDF</a></li>
+        <li><strong>Tugas 3:</strong> <a href="assets/tugas3.pdf" target="_blank">Unduh PDF</a></li>
+        <li><strong>Tugas 4:</strong> <a href="assets/tugas4.pdf" target="_blank">Unduh PDF</a></li>
+      </ul>
+    </section>
+
+    <!-- KUIS SECTION -->
+    <section id="kuis" class="content-section">
+      <h2>Kumpulan Kuis</h2>
+      <ul>
+        <li><strong>Kuis 1:</strong> <a href="https://youtu.be/UE5F3IRGMBk" target="_blank">Lihat Video</a></li>
+        <li><strong>Kuis 2:</strong> <a href="https://youtu.be/x_RIC03Eqx8" target="_blank">Lihat Video</a></li>
+        <li><strong>Kuis 3:</strong> <a href="https://youtu.be/Z7-5cBvqMgA" target="_blank">Lihat Video</a></li>
+        <li><strong>Kuis 4:</strong> <a href="https://youtu.be/Kp2xbdlL13Q" target="_blank">Lihat Video</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="copyright">&copy; 2022 Rica Lizania</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('dashboard').style.display = 'none';
+      document.getElementById('tugas').style.display = 'none';
+      document.getElementById('kuis').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function showDashboard() {
+      document.getElementById('dashboard').style.display = 'block';
+      document.getElementById('tugas').style.display = 'none';
+      document.getElementById('kuis').style.display = 'none';
+    }
+
+    // Default: hanya tampilkan dashboard saat pertama kali load
+    window.onload = function () {
+      showDashboard();
+    };
+  </script>
+</body>
+</html>
